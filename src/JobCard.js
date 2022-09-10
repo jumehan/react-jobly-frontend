@@ -30,20 +30,18 @@ function JobCard({ job, applyJob }) {
   }
 
   return (
-    <Card style={{
-      width: '18rem',
-      height: '11rem',
-      margin: '1rem',
-      padding: '0.3rem'
-    }}>
+    <Card
+      className="m-2 p-2"
+      style={{ width: '18rem', height: '14rem' }}
+    >
       <CardBody>
         <CardTitle tag="h5">{title}</CardTitle>
         <CardSubtitle className="mb-2 text-muted"
           tag="h6">{companyName}</CardSubtitle>
         <CardText>Salary: {salary}</CardText>
         {equity && <CardText>Equity: {equity}</CardText>}
-        <JobApply applied={userJob()} id={id} applyJob={applyJob}/>
       </CardBody>
+      <JobApply applied={userJob()} id={id} applyJob={applyJob} />
     </Card>
   );
 }

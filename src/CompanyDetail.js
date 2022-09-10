@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import JobCardList from "./JobCardList";
 import JoblyApi from "./joblyApi";
+import { Container, Row } from "reactstrap";
 
 
 /**CompanyDetail: name, description and list of all jobs of one company
@@ -14,7 +15,7 @@ import JoblyApi from "./joblyApi";
  *
  * CompanyDetail -> JobCardList
  */
-function CompanyDetail({applyJob}) {
+function CompanyDetail({ applyJob }) {
   const [company, setCompany] = useState({
     data: null,
     isLoading: true
@@ -37,11 +38,13 @@ function CompanyDetail({applyJob}) {
   if (company.isLoading) return <h1>LOADING...</h1>;
 
   return (
-    <div>
+    <Container>
+      <Row style={{margin: '20px'}}>
       <h2> {company.data.name}</h2>
       <p> {company.data.description}</p>
-      <JobCardList jobs={company.data.jobs} applyJob={applyJob}/>
-    </div>
+      </Row>
+      <JobCardList jobs={company.data.jobs} applyJob={applyJob} />
+    </Container>
 
   );
 }

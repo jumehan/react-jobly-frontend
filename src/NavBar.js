@@ -33,9 +33,6 @@ function NavBar({ logout }) {
     return (
       <>
         <NavItem>
-          <NavLink to="/">Home</NavLink>
-        </NavItem>&nbsp;&nbsp;&nbsp;
-        <NavItem>
           <NavLink to="/companies">Companies</NavLink>
         </NavItem>&nbsp;&nbsp;&nbsp;
         <NavItem>
@@ -69,7 +66,7 @@ function NavBar({ logout }) {
   return (
     <div>
       <Navbar className="NavBar" bg="light" expand="lg" color="white">
-        <NavbarBrand to="/">Jobly</NavbarBrand>
+        <NavbarBrand href="/">Jobly</NavbarBrand>
         <NavbarToggler onClick={toggle} aria-controls="basic-navbar-nav" />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ms-auto">

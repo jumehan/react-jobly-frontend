@@ -18,20 +18,18 @@ function CompanyCard({ company }) {
   let logoSrc = logoUrl ? logoUrl : "../logos/no-image-available.png";
   return (
     <NavLink to={`/companies/${handle}`} >
-      <Card 
-        style={{
-          width: '18rem',
-          height: '24rem',
-          margin: '1rem',
-          padding: '0.5rem'
-        }}>
+      <Card
+        className="m-2 p-2"
+        style={{ width: '18rem', height: '24rem' }}
+      >
         <img
           src={logoSrc}
           alt={`${name} logo`}
           style={{
             maxHeight: "150px",
             width: "auto",
-          }} />
+          }}
+        />
         <CardBody>
           <CardTitle tag="h5">{name}</CardTitle>
           <CardText>{description}</CardText>

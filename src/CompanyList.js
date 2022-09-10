@@ -58,7 +58,7 @@ function CompanyList() {
           <SearchForm search={search} />
         </Col>
       </Row>
-      <Row xs='1' sm='1' md='3' xl='4'>
+      <Row xs='1' sm='1' md='2' lg='3' xxl='4'>
         {companies.data.length > 0
           ?
           companies.data.map(c => (

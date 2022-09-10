@@ -8,7 +8,7 @@ import { Container, Row } from "reactstrap";
 function JobCardList({ jobs, applyJob }) {
   return (
     <Container>
-      <Row xs='1' sm='1' md='3' xl='4'>
+      <Row xs='1' sm='1' md='2' lg="3" xxl='4'>
 
         {jobs.map(j => (
           <div key={j.id}><JobCard job={j} applyJob={applyJob} /> </div>

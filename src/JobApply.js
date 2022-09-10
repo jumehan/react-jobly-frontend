@@ -1,17 +1,23 @@
 import { Button } from "reactstrap";
 
-function JobApply({applyJob, applied, id}) {
+function JobApply({ applyJob, applied, id }) {
 
-  function handleSubmit(evt){
+  function handleSubmit(evt) {
     evt.preventDefault();
-    applyJob(id)
+    applyJob(id);
   }
 
-  return(
-    <Button onClick={handleSubmit} disabled={applied ? "true" : false}>
+  return (
+    <Button
+     className="mx.auto"
+      width="200px"
+      color="primary"
+      onClick={handleSubmit}
+      disabled={applied ? true : false}
+    >
       {!applied ? "Apply" : "Applied"}
     </Button>
-  )
+  );
 }
 
 export default JobApply;
