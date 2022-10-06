@@ -86,9 +86,12 @@ function App() {
 
   return (
     <div className="App"
-          style={{backgroundImage: `url("background.jpg")`,
-                  backgroundSize: "cover",
-                  height: "100vh"}}>
+      style={{
+        backgroundImage: `url("background.jpg")`,
+        backgroundSize: "cover",
+        backgroundRepeat: "repeat-y",
+        height: "100vh"
+      }}>
       <userContext.Provider value={{ user }}>
         <BrowserRouter>
           <NavBar logout={logout} />
