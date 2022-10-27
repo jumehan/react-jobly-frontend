@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo, useCallback } from "react";
+import { useState, useEffect, useMemo, } from "react";
 import { Form, Input, Button, Row, Col } from "reactstrap";
 import debounce from "lodash/debounce";
 
@@ -12,6 +12,7 @@ import debounce from "lodash/debounce";
  *
  * App -> RouteList -> { CompanyList, JobList } -> SearchForm
  */
+//FIXME: dependency issue with useMemo
 function SearchForm({ search }) {
   const [term, setTerm] = useState(null);
   const debounceSearch = useMemo(() => debounce((term) => {

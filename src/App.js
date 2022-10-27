@@ -1,4 +1,3 @@
-import './App.css';
 import { useState, useEffect } from "react";
 import userContext from "./userContext";
 import jwt_decode from "jwt-decode";
@@ -43,6 +42,7 @@ function App() {
       fetchUser();
     }
     else setUser(null);
+    setIsLoading(false);
   }, [token]);
 
   // store user data and token in state & localStorage
